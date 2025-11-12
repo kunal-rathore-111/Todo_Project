@@ -6,25 +6,28 @@
 
 
 
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
 @font-face {
     font-family: 'Heming';
     src: url("./font/heming-variable.ttf");
 }
 
 body {
-    background-color: #000000;
+    background-color: #f5f5f7;
     overflow-x: hidden;
-    border: 3px solid rgb(255, 255, 255);
+    border: none;
 }
 
 .usernameWithHi {
     display: flex;
     align-items: center;
-    color: #ffffff;
-    padding: 10px 0 0 30px;
-    font-size: 18px;
-    font-weight: 600;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: #1d1d1f;
+    padding: 24px 0 0 40px;
+    font-size: 20px;
+    font-weight: 500;
+    font-family: 'Inter', sans-serif;
+    letter-spacing: -0.01em;
 }
 
 .hiBox {
@@ -141,17 +144,40 @@ body {
 
 input,
 select,
-option,
+option {
+    border: 1px solid #d2d2d7;
+    border-radius: 8px;
+    padding: 12px 16px;
+    font-weight: 400;
+    font-size: 15px;
+    font-family: 'Inter', sans-serif;
+    background-color: #ffffff;
+    transition: all 0.2s ease;
+    color: #1d1d1f;
+}
+
+input:focus,
+select:focus {
+    outline: none;
+    border-color: #007aff;
+    box-shadow: 0 0 0 3px rgba(0, 122, 255, 0.1);
+}
+
+input::placeholder {
+    color: #86868b;
+}
+
 .SubmitButton,
 .addTodoButton,
 .deleteTodoButton,
 .doneButton,
 .logOut {
-    border: 2px solid black;
-    border-radius: 6px;
-    padding: 10px;
-    font-weight: 600;
-    font-size: 16px;
+    border: none;
+    border-radius: 8px;
+    padding: 12px 20px;
+    font-weight: 500;
+    font-size: 15px;
+    font-family: 'Inter', sans-serif;
 }
 
 
@@ -164,7 +190,24 @@ option,
 
 .SubmitButton:hover,
 .addTodoButton:hover {
-    background-color: rgba(243, 38, 236, 0.984);
+    background-color: #0051d5;
+}
+
+.addTodoButton {
+    background-color: #007aff;
+    color: #ffffff;
+    transition: all 0.2s ease;
+}
+
+.logOut {
+    background-color: #f5f5f7;
+    color: #1d1d1f;
+    border: 1px solid #d2d2d7;
+    transition: all 0.2s ease;
+}
+
+.logOut:hover {
+    background-color: #e8e8ed;
 }
 
 
@@ -193,86 +236,139 @@ option,
     display: flex;
     flex-wrap: nowrap;
     flex-direction: column;
-    background-color: #80ced7;
+    background-color: #ffffff;
+    border-radius: 16px;
+    padding: 24px;
+    box-shadow: 0 2px 16px rgba(0, 0, 0, 0.06);
 }
 
 
 
 .date {
-    margin-left: 1.5%;
-    font-size: 18px;
+    font-size: 14px;
     font-weight: 600;
     display: flex;
     flex-direction: column;
-    margin: 10px
+    margin: 20px 0 12px 0;
+    color: #6e6e73;
+    font-family: 'Inter', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
 }
 
 
 .todoList {
-    font-size: 18px;
-    border: 3px solid #ffffff;
-    padding: 20px;
+    font-size: 16px;
+    border: 1px solid #e5e5ea;
+    padding: 16px 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    gap: 8px;
+    gap: 12px;
+    background-color: #fafafa;
+    border-radius: 12px;
+    margin-bottom: 8px;
+    transition: all 0.2s ease;
+    font-family: 'Inter', sans-serif;
+}
+
+.todoList:hover {
+    background-color: #f5f5f7;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
 }
 
 
 
 .todoTitle {
     width: 250px;
-    font-weight: 300;
+    font-weight: 400;
+    color: #1d1d1f;
+    line-height: 1.5;
 }
 
 .doneButton {
     width: 94px;
+    font-family: 'Inter', sans-serif;
+    font-weight: 500;
+    border-radius: 8px;
+    transition: all 0.2s ease;
 }
 
 .notDone {
-    background-color: rgba(243, 36, 8, 0.952);
+    background-color: #f5f5f7;
+    color: #86868b;
+    border: 1px solid #d2d2d7;
+}
 
+.notDone:hover {
+    background-color: #e8e8ed;
 }
 
 .done {
-    background-color: rgba(75, 243, 8, 0.952);
+    background-color: #34c759;
+    color: #ffffff;
+    border: 1px solid #34c759;
+}
 
+.done:hover {
+    background-color: #2fb04d;
 }
 
 .deleteTodoTD {
     width: 150px;
 }
 
+.deleteTodoButton {
+    background-color: #ffffff;
+    color: #ff3b30;
+    border: 1px solid #d2d2d7;
+    font-family: 'Inter', sans-serif;
+    font-weight: 500;
+    border-radius: 8px;
+    transition: all 0.2s ease;
+}
+
+.deleteTodoButton:hover {
+    background-color: #ff3b30;
+    color: #ffffff;
+    border-color: #ff3b30;
+}
+
 
 #addTodoDivAndLogOut {
     height: 47vh;
     width: 22vw;
-    border: 3px solid rgb(209, 209, 209);
-    border-radius: 5%;
+    border: none;
+    border-radius: 16px;
     display: flex;
     justify-content: space-around;
     flex-direction: column;
     align-items: center;
-    background-color: #9ad1d4;
+    background-color: #ffffff;
+    box-shadow: 0 2px 16px rgba(0, 0, 0, 0.06);
+    padding: 24px;
 }
 
 .addTodo_heading {
-    font-size: 40px;
-    font-family: "Heming";
-    font-weight: 500;
+    font-size: 28px;
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
     margin: 0px;
+    color: #1d1d1f;
+    letter-spacing: -0.02em;
 }
 
 .addTodoForm {
     width: 100%;
     height: 60%;
-    padding: 10px 15px;
-    border: 3px solid white;
-    border-radius: 5%;
-    font-size: 22px;
+    padding: 20px;
+    border: 1px solid #e5e5ea;
+    border-radius: 12px;
+    font-size: 16px;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
+    background-color: #fafafa;
 }
 
 .addTodoInputs {
@@ -301,7 +397,7 @@ option,
 
 
     .addTodo_heading {
-        font-size: 40px;
+        font-size: 28px;
     }
 
     #signInForm {
