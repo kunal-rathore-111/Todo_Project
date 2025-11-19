@@ -7,6 +7,7 @@ The application features **user authentication, todo management with CRUD operat
 ## 🌐 Live Demo
 - [Demo 1](https://todo-project-kohl.vercel.app/)  
 - [Demo 2](https://todo-project-kunal-rathores-projects-3c5b48fa.vercel.app/)
+- Demo email - kunalx1@gmail.com, Pass- Kunal@1234
 
 ---
 
