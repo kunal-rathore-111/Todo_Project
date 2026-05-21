@@ -16,7 +16,7 @@ const app = express();
 app.use(cookieParser());
 app.use(express.json());
 app.use(cors({
-    origin: ["https://todo-project-git-main-kunal-rathores-projects-3c5b48fa.vercel.app", "https://todo-project-kohl.vercel.app", "http://localhost:5500", "http://0.0.0.0:5500/client/index.html"],
+    origin: ["https://todo-project-git-main-kunal-rathores-projects-3c5b48fa.vercel.app", "https://todo-project-kohl.vercel.app", "http://localhost:5500"],
     credentials: true,
 }));
 
