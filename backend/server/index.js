@@ -8,6 +8,7 @@ const todos = require("./routes/todos_routes");
 const logout = require("./routes/logout_route");
 const checkToken = require("./routes/checkToken_route");
 const cookieParser = require("cookie-parser");
+const { connectDB } = require("./db/db");
 
 const app = express();
 
@@ -15,7 +16,7 @@ const app = express();
 app.use(cookieParser());
 app.use(express.json());
 app.use(cors({
-    origin: ["https://todo-project-git-main-kunal-rathores-projects-3c5b48fa.vercel.app", "https://todo-project-kohl.vercel.app", "http://localhost:5500"],
+    origin: ["https://todo-project-git-main-kunal-rathores-projects-3c5b48fa.vercel.app", "https://todo-project-kohl.vercel.app", "http://localhost:5500", "http://0.0.0.0:5500/client/index.html"],
     credentials: true,
 }));
 
@@ -27,6 +28,7 @@ app.use(rateLimit({
     skip: (req) => req.method === "OPTIONS" // skip the rateLimit for OPTIONS method
 })); // limit only 400 request per ip, in 15mints
 
+connectDB();
 
 app.use('/issignedin', checkToken);   // to check does token exists
 app.use('/sign', signup_in);         // route which handels signup and signin 

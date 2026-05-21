@@ -1,7 +1,10 @@
 
 const mongoose = require("mongoose");
 const schema = mongoose.Schema;
-mongoose.connect(process.env.MONGO_URL);
+export function connectDB() {
+
+    mongoose.connect(process.env.MONGO_URL);
+}
 
 const users = new schema({
     firstname: { type: String },
